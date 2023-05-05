@@ -78,7 +78,7 @@ namespace ISpan.MultiLayers.WinApp
 			CategoryEditVM vm = dto.ToViewModel();
 
 			txtName.Text = vm.Name;
-			txtDisplayOrder.Text = vm.DisplayOrder.ToString();
+			txtDisplayOrder.Text = vm.DisplayOrder.ToString();9114179
 		}
 	}
 }
