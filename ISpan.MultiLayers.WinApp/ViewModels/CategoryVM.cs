@@ -51,7 +51,8 @@ namespace ISpan.MultiLayers.WinApp.ViewModels
 
 		[Display(Name = "顯示順序")]
 		[Required(ErrorMessage = "{0}必填")]
-		public int DisplayOrder { get; set; }
+		[Range(1,1000, ErrorMessage = "{0}必須介於1-1000")]
+		public int? DisplayOrder { get; set; }
 	}
 
 	public static class CategoryAddVMExts
@@ -61,7 +62,7 @@ namespace ISpan.MultiLayers.WinApp.ViewModels
 			return new CategoryAddDto
 			{
 				Name = vm.Name,
-				DisplayOrder = vm.DisplayOrder,
+				DisplayOrder = vm.DisplayOrder.HasValue ? vm.DisplayOrder.Value : 0
 			};
 		}
 	}
@@ -81,6 +82,7 @@ namespace ISpan.MultiLayers.WinApp.ViewModels
 
 		[Display(Name = "顯示順序")]
 		[Required(ErrorMessage = "{0}必填")]
+		[Range(1, 1000, ErrorMessage = "{0}必須介於1-1000")]
 		public int DisplayOrder { get; set; }
 	}
 
@@ -92,7 +94,7 @@ namespace ISpan.MultiLayers.WinApp.ViewModels
 			{
 				Id = vm.Id,
 				Name = vm.Name,	
-				DisplayOrder = vm.DisplayOrder,
+				DisplayOrder = vm.DisplayOrder
 			};
 		}
 

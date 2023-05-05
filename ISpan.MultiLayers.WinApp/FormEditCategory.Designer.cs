@@ -28,11 +28,15 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.txtDisplayOrder = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.btnUpdate = new System.Windows.Forms.Button();
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+			this.btnDelete = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtDisplayOrder
@@ -77,11 +81,26 @@
 			this.btnUpdate.UseVisualStyleBackColor = true;
 			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
+			// btnDelete
+			// 
+			this.btnDelete.Location = new System.Drawing.Point(138, 115);
+			this.btnDelete.Name = "btnDelete";
+			this.btnDelete.Size = new System.Drawing.Size(75, 23);
+			this.btnDelete.TabIndex = 7;
+			this.btnDelete.Text = "Delete";
+			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+			// 
 			// FormEditCategory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(257, 144);
+			this.ClientSize = new System.Drawing.Size(257, 160);
+			this.Controls.Add(this.btnDelete);
 			this.Controls.Add(this.btnUpdate);
 			this.Controls.Add(this.txtDisplayOrder);
 			this.Controls.Add(this.label2);
@@ -90,6 +109,7 @@
 			this.Name = "FormEditCategory";
 			this.Text = "FormEditCategory";
 			this.Load += new System.EventHandler(this.FormEditCategory_Load);
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -102,5 +122,7 @@
 		private System.Windows.Forms.TextBox txtName;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button btnUpdate;
+		private System.Windows.Forms.ErrorProvider errorProvider1;
+		private System.Windows.Forms.Button btnDelete;
 	}
 }

@@ -28,11 +28,14 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtName = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.txtDisplayOrder = new System.Windows.Forms.TextBox();
 			this.btnAdd = new System.Windows.Forms.Button();
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -77,6 +80,10 @@
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
 			// FormAddCategory
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -89,6 +96,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "FormAddCategory";
 			this.Text = "FormAddCategory";
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -101,5 +109,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtDisplayOrder;
 		private System.Windows.Forms.Button btnAdd;
+		private System.Windows.Forms.ErrorProvider errorProvider1;
 	}
 }
