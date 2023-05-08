@@ -31,6 +31,8 @@
 			this.buttonCategories = new System.Windows.Forms.Button();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.維護商品分類ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.btnLogout = new System.Windows.Forms.Button();
+			this.登出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -47,7 +49,8 @@
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.維護商品分類ToolStripMenuItem});
+            this.維護商品分類ToolStripMenuItem,
+            this.登出ToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -61,16 +64,35 @@
 			this.維護商品分類ToolStripMenuItem.Text = "維護商品分類";
 			this.維護商品分類ToolStripMenuItem.Click += new System.EventHandler(this.維護商品分類ToolStripMenuItem_Click);
 			// 
+			// btnLogout
+			// 
+			this.btnLogout.Location = new System.Drawing.Point(11, 291);
+			this.btnLogout.Name = "btnLogout";
+			this.btnLogout.Size = new System.Drawing.Size(75, 23);
+			this.btnLogout.TabIndex = 2;
+			this.btnLogout.Text = "登出";
+			this.btnLogout.UseVisualStyleBackColor = true;
+			this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+			// 
+			// 登出ToolStripMenuItem
+			// 
+			this.登出ToolStripMenuItem.Name = "登出ToolStripMenuItem";
+			this.登出ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+			this.登出ToolStripMenuItem.Text = "登出";
+			this.登出ToolStripMenuItem.Click += new System.EventHandler(this.登出ToolStripMenuItem_Click);
+			// 
 			// FormMain
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.btnLogout);
 			this.Controls.Add(this.buttonCategories);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "FormMain";
 			this.Text = "FormMain";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -83,5 +105,7 @@
 		private System.Windows.Forms.Button buttonCategories;
 		private System.Windows.Forms.MenuStrip menuStrip1;
 		private System.Windows.Forms.ToolStripMenuItem 維護商品分類ToolStripMenuItem;
+		private System.Windows.Forms.Button btnLogout;
+		private System.Windows.Forms.ToolStripMenuItem 登出ToolStripMenuItem;
 	}
 }
