@@ -47,6 +47,7 @@
     <Compile Include="CategoryRepository.cs" />
     <Compile Include="Core\CategoryEntity.cs" />
     <Compile Include="Dtos\CategoryDto.cs" />
+    <Compile Include="infra\MemoryRepository\MemoryCategoryRepository.cs" />
     <Compile Include="infra\SqlRepositories\SqlCategoryRepository.cs" />
     <Compile Include="infra\SqlRepositories\SqlUserRepository.cs" />
     <Compile Include="interfaces\ICategoryRepository.cs" />
